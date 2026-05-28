@@ -1,9 +1,22 @@
+import Image from "next/image";
 import FadeIn from "./FadeIn";
 import HeroStats from "./HeroStats";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#1A1410]">
+      {/* Background photo */}
+      <Image
+        src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80"
+        alt="Frisörsalong"
+        fill
+        priority
+        className="object-cover object-center"
+      />
+
+      {/* Dark overlay — keeps text readable */}
+      <div className="absolute inset-0 bg-black/60" />
+
       {/* Diagonal stripe texture */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -28,7 +41,7 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 90% 60% at 50% 110%, rgba(184,115,51,0.10) 0%, transparent 65%)",
+            "radial-gradient(ellipse 90% 60% at 50% 110%, rgba(184,115,51,0.12) 0%, transparent 65%)",
         }}
       />
 
