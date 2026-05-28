@@ -1,24 +1,5 @@
+import Image from "next/image";
 import FadeIn from "./FadeIn";
-
-function AvatarPlaceholder() {
-  return (
-    <svg
-      width="52"
-      height="52"
-      viewBox="0 0 52 52"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle cx="26" cy="18" r="10" stroke="currentColor" strokeWidth="1.4" />
-      <path
-        d="M7 46C7 36.06 15.51 28 26 28C36.49 28 45 36.06 45 46"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
 
 export default function Team() {
   return (
@@ -55,11 +36,15 @@ export default function Team() {
               <div className="relative mx-auto mb-7 w-28 h-28">
                 {/* Outer ring */}
                 <div className="absolute inset-0 rounded-full border border-[#B87333]/15 group-hover:border-[#B87333]/35 scale-[1.12] transition-colors duration-300" />
-                {/* Inner circle */}
-                <div className="w-28 h-28 rounded-full bg-[#2A1E14] border border-[#B87333]/20 group-hover:border-[#B87333]/40 transition-colors duration-300 flex items-center justify-center overflow-hidden">
-                  <span className="text-[#B87333]/25 group-hover:text-[#B87333]/45 transition-colors duration-300">
-                    <AvatarPlaceholder />
-                  </span>
+                {/* Photo circle */}
+                <div className="w-28 h-28 rounded-full border border-[#B87333]/20 group-hover:border-[#B87333]/40 transition-colors duration-300 overflow-hidden">
+                  <Image
+                    src="/dario.png"
+                    alt="Dario – Grundare & Frisör"
+                    width={112}
+                    height={112}
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
               </div>
 
